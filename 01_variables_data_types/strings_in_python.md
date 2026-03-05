@@ -160,3 +160,152 @@ Because strings cannot be modified character by character.
 - Negative indexing accesses characters from the end
 - Use `len()` to get string length
 - Use `in` operator to check substring
+
+# String Concatenation & String Interpolation
+
+## 1. String Concatenation
+
+String concatenation means **joining multiple strings together**.
+
+In Python, concatenation is done using the **+ operator**.
+
+Important rule:
+All values must be **strings**.
+
+---
+
+### Example: String + String
+
+'''python
+my_str_1 = "Hello"
+my_str_2 = "World"
+
+result = my_str_1 + " " + my_str_2
+print(result)   # Hello World
+'''
+
+---
+
+## 2. Concatenating String With Number
+
+Python **does NOT automatically convert numbers to strings**.
+
+Trying this will cause an error.
+
+'''python
+name = "John Doe"
+age = 26
+
+result = name + age
+print(result)
+# TypeError: can only concatenate str (not "int") to str
+'''
+
+To fix this, convert numbers to string using **str()**.
+
+'''python
+name = "John Doe"
+age = 26
+
+result = name + str(age)
+print(result)   # John Doe26
+'''
+
+---
+
+## 3. Augmented Concatenation (+=)
+
+The **+= operator** allows concatenation and assignment in one step.
+
+'''python
+name = "John Doe"
+age = 26
+
+name_and_age = name
+name_and_age += str(age)
+
+print(name_and_age)   # John Doe26
+'''
+
+---
+
+## 4. String Interpolation
+
+String interpolation means **inserting variables or expressions inside a string**.
+
+Python uses **f-strings (formatted strings)** for this.
+
+Syntax:
+Start string with **f** and use **{}** to insert variables.
+
+---
+
+### Example: f-string
+
+'''python
+name = "John Doe"
+age = 26
+
+message = f"My name is {name} and I am {age} years old"
+print(message)
+'''
+
+Output:
+My name is John Doe and I am 26 years old
+
+---
+
+### Example: Expressions Inside f-string
+
+'''python
+num1 = 5
+num2 = 10
+
+print(f"The sum of {num1} and {num2} is {num1 + num2}")
+'''
+
+Output:
+The sum of 5 and 10 is 15
+
+---
+
+## 5. Advantages of f-strings
+
+✔ Cleaner code  
+✔ Easier to read  
+✔ Automatic type conversion  
+✔ Can evaluate expressions
+
+---
+
+## 6. Best Practice
+
+Prefer **f-strings** over concatenation when working with variables.
+
+Example:
+
+❌ Less readable
+'''python
+print("My name is " + name + " and I am " + str(age))
+'''
+
+✔ Recommended
+'''python
+print(f"My name is {name} and I am {age}")
+'''
+
+---
+
+## 7. Common Mistakes
+
+- Concatenating string with integer without conversion
+- Forgetting `f` before f-string
+- Missing `{}` in interpolation
+
+---
+
+## 8. Key Point to Remember
+
+Concatenation → Joining strings using **+**
+
+Interpolation → Embedding variables inside string using **f-strings**
