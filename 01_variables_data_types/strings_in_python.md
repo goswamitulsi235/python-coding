@@ -309,3 +309,131 @@ print(f"My name is {name} and I am {age}")
 Concatenation → Joining strings using **+**
 
 Interpolation → Embedding variables inside string using **f-strings**
+
+
+
+## String Slicing
+
+### Key Points
+- String slicing is used to extract a portion of a string.
+- Each character in a string has an **index** (starting from 0).
+- Negative indexing starts from the end of the string.
+- Slicing does **not modify the original string** (strings are immutable).
+- Basic slicing syntax:
+
+string[start:stop]
+
+- `start` → index where slicing begins.
+- `stop` → index where slicing stops (NOT included).
+- `step` → interval between characters (optional).
+
+---
+
+### Basic Index Access
+
+'''python
+my_str = "Hello world"
+
+print(my_str[0])   # H
+print(my_str[6])   # w
+print(my_str[-1])  # d
+'''
+
+---
+
+### Basic String Slicing
+
+'''python
+my_str = "Hello world"
+
+print(my_str[1:4])   # ell
+'''
+
+Explanation:
+- Starts at index **1**
+- Stops before index **4**
+
+---
+
+### Omitting Start Index
+
+If start is omitted → Python assumes **0**
+
+'''python
+my_str = "Hello world"
+
+print(my_str[:7])   # Hello w
+'''
+
+---
+
+### Omitting Stop Index
+
+If stop is omitted → Python slices **until the end**
+
+'''python
+my_str = "Hello world"
+
+print(my_str[8:])   # rld
+'''
+
+---
+
+### Extract Entire String
+
+'''python
+my_str = "Hello world"
+
+print(my_str[:])   # Hello world
+'''
+
+---
+
+### Using Step in Slicing
+
+Syntax:
+
+string[start:stop:step]
+
+'''python
+my_str = "Hello world"
+
+print(my_str[0:11:2])   # Hlowrd
+'''
+
+Explanation:
+- Start → 0
+- Stop → 11
+- Step → 2 (every second character)
+
+---
+
+### Reverse a String (Common Trick)
+
+Using step = -1
+
+'''python
+my_str = "Hello world"
+
+print(my_str[::-1])   # dlrow olleH
+'''
+
+---
+
+### Important Things to Remember
+
+- `stop` index is **always excluded**.
+- Slicing **does not change the original string**.
+- Negative step (`-1`) can reverse the string.
+- Default values:
+  - start = 0
+  - stop = end of string
+  - step = 1
+
+---
+
+### Common Mistakes
+
+- Forgetting that **stop index is excluded**.
+- Confusing **indexing (`[]`) with slicing (`[start:stop]`)**.
+- Assuming slicing modifies the original string (it does not).
