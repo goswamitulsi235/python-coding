@@ -23,14 +23,12 @@ Both are treated the same in Python.
 
 Multi-line strings are created using **triple quotes**.
 
-'''python
 my_str_3 = """Multiline
 string"""
 
 my_str_4 = '''Another
 multiline
 string'''
-'''
 
 Used when writing long text or documentation.
 
