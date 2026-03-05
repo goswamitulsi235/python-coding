@@ -10,10 +10,10 @@ Strings can be written using:
 
 Example:
 
-'''python
+```python
 my_str_1 = 'Hello'
 my_str_2 = "World"
-'''
+```
 
 Both are treated the same in Python.
 
@@ -38,17 +38,17 @@ Used when writing long text or documentation.
 
 ### Method 1 — Use opposite quotes
 
-'''python
+```python
 msg = "It's a sunny day"
 quote = 'She said, "Hello World!"'
-'''
+```
 
 ### Method 2 — Escape characters using backslash `\`
 
-'''python
+```python
 msg = 'It\'s a sunny day'
 quote = "She said, \"Hello!\""
-'''
+```
 
 ---
 
@@ -58,14 +58,14 @@ Use the **`in` operator**.
 
 Returns **True or False**.
 
-'''python
+```python
 my_str = "Hello world"
 
 print('Hello' in my_str)   # True
 print('hey' in my_str)     # False
 print('e' in my_str)       # True
 print('f' in my_str)       # False
-'''
+```
 
 ---
 
@@ -73,11 +73,11 @@ print('f' in my_str)       # False
 
 Use the built-in function **`len()`**
 
-'''python
+```python
 my_str = "Hello world"
 
 print(len(my_str))   # 11
-'''
+```
 
 It counts the number of characters including spaces.
 
@@ -89,12 +89,12 @@ Each character in a string has an **index position**.
 
 Indexing starts from **0**.
 
-'''python
+```python
 my_str = "Hello world"
 
 print(my_str[0])   # H
 print(my_str[6])   # w
-'''
+```
 
 ---
 
@@ -102,12 +102,12 @@ print(my_str[6])   # w
 
 Negative indexing starts from the end of the string.
 
-'''python
+```python
 my_str = "Hello world"
 
 print(my_str[-1])   # d
 print(my_str[-2])   # l
-'''
+```
 
 Useful when accessing last characters.
 
@@ -122,13 +122,13 @@ Once created, the string **cannot be changed directly**.
 
 ### Reassignment is allowed
 
-'''python
+```python
 greeting = "hi"
 
 greeting = "hello"
 
 print(greeting)
-'''
+```
 
 The variable now points to a **new string object**.
 
@@ -136,15 +136,12 @@ The variable now points to a **new string object**.
 
 ### Direct modification is NOT allowed
 
-'''python
+```python
 greeting = "hi"
 
 greeting[0] = "H"   # ERROR
 '''
-
-Error:
-```
-TypeError: 'str' object does not support item assignment
+#TypeError: 'str' object does not support item assignment
 ```
 
 Because strings cannot be modified character by character.
@@ -176,13 +173,13 @@ All values must be **strings**.
 
 ### Example: String + String
 
-'''python
+```python
 my_str_1 = "Hello"
 my_str_2 = "World"
 
 result = my_str_1 + " " + my_str_2
 print(result)   # Hello World
-'''
+```
 
 ---
 
@@ -192,24 +189,24 @@ Python **does NOT automatically convert numbers to strings**.
 
 Trying this will cause an error.
 
-'''python
+```python
 name = "John Doe"
 age = 26
 
 result = name + age
 print(result)
 # TypeError: can only concatenate str (not "int") to str
-'''
+```
 
 To fix this, convert numbers to string using **str()**.
 
-'''python
+```python
 name = "John Doe"
 age = 26
 
 result = name + str(age)
 print(result)   # John Doe26
-'''
+```
 
 ---
 
@@ -217,7 +214,7 @@ print(result)   # John Doe26
 
 The **+= operator** allows concatenation and assignment in one step.
 
-'''python
+```python
 name = "John Doe"
 age = 26
 
@@ -225,7 +222,7 @@ name_and_age = name
 name_and_age += str(age)
 
 print(name_and_age)   # John Doe26
-'''
+```
 
 ---
 
@@ -242,13 +239,13 @@ Start string with **f** and use **{}** to insert variables.
 
 ### Example: f-string
 
-'''python
+```python
 name = "John Doe"
 age = 26
 
 message = f"My name is {name} and I am {age} years old"
 print(message)
-'''
+```
 
 Output:
 My name is John Doe and I am 26 years old
@@ -257,12 +254,12 @@ My name is John Doe and I am 26 years old
 
 ### Example: Expressions Inside f-string
 
-'''python
+```python
 num1 = 5
 num2 = 10
 
 print(f"The sum of {num1} and {num2} is {num1 + num2}")
-'''
+```
 
 Output:
 The sum of 5 and 10 is 15
@@ -331,23 +328,23 @@ string[start:stop]
 
 ### Basic Index Access
 
-'''python
+```python
 my_str = "Hello world"
 
 print(my_str[0])   # H
 print(my_str[6])   # w
 print(my_str[-1])  # d
-'''
+```
 
 ---
 
 ### Basic String Slicing
 
-'''python
+```python
 my_str = "Hello world"
 
 print(my_str[1:4])   # ell
-'''
+```
 
 Explanation:
 - Starts at index **1**
@@ -359,11 +356,11 @@ Explanation:
 
 If start is omitted → Python assumes **0**
 
-'''python
+```python
 my_str = "Hello world"
 
 print(my_str[:7])   # Hello w
-'''
+```
 
 ---
 
@@ -371,21 +368,21 @@ print(my_str[:7])   # Hello w
 
 If stop is omitted → Python slices **until the end**
 
-'''python
+```python
 my_str = "Hello world"
 
 print(my_str[8:])   # rld
-'''
+```
 
 ---
 
 ### Extract Entire String
 
-'''python
+```python
 my_str = "Hello world"
 
 print(my_str[:])   # Hello world
-'''
+```
 
 ---
 
@@ -395,11 +392,11 @@ Syntax:
 
 string[start:stop:step]
 
-'''python
+```python
 my_str = "Hello world"
 
 print(my_str[0:11:2])   # Hlowrd
-'''
+```
 
 Explanation:
 - Start → 0
@@ -412,11 +409,11 @@ Explanation:
 
 Using step = -1
 
-'''python
+```python
 my_str = "Hello world"
 
 print(my_str[::-1])   # dlrow olleH
-'''
+```
 
 ---
 
@@ -432,8 +429,147 @@ print(my_str[::-1])   # dlrow olleH
 
 ---
 
-### Common Mistakes
+## String Methods
 
-- Forgetting that **stop index is excluded**.
-- Confusing **indexing (`[]`) with slicing (`[start:stop]`)**.
-- Assuming slicing modifies the original string (it does not).
+### Key Points
+- String methods are built-in functions used to manipulate or analyze strings.
+- Strings are **immutable**, so methods return a **new string** instead of modifying the original.
+- Common operations include changing case, splitting text, replacing words, checking patterns, etc.
+
+---
+
+### Changing Case
+
+'''python
+my_str = "hello world"
+
+print(my_str.upper())   # HELLO WORLD
+print(my_str.lower())   # hello world
+print(my_str.capitalize())  # Hello world
+print(my_str.title())   # Hello World
+'''
+
+Important:
+- `upper()` → converts all characters to uppercase
+- `lower()` → converts all characters to lowercase
+- `capitalize()` → first letter uppercase, rest lowercase
+- `title()` → first letter of each word uppercase
+
+---
+
+### Removing Spaces
+
+'''python
+my_str = "   hello world   "
+
+print(my_str.strip())   # "hello world"
+'''
+
+Important:
+- `strip()` removes **leading and trailing whitespace**
+- Useful when processing user input
+
+---
+
+### Replacing Text
+
+```python
+my_str = "hello world"
+
+print(my_str.replace("hello", "hi"))  # hi world
+```
+Important:
+- `replace(old, new)` replaces occurrences of a substring.
+
+---
+
+### Splitting Strings
+
+```python
+my_str = "hello world"
+
+words = my_str.split()
+print(words)   # ['hello', 'world']
+```
+
+Important:
+- `split()` converts a string into a **list**
+- Default separator = whitespace
+
+---
+
+### Joining Strings
+
+```python
+my_list = ["hello", "world"]
+
+result = " ".join(my_list)
+print(result)   # hello world
+```
+
+Important:
+- `join()` combines list elements into a string
+- Requires a **separator string**
+
+---
+
+### Checking Start / End
+
+```python
+my_str = "hello world"
+
+print(my_str.startswith("hello"))  # True
+print(my_str.endswith("world"))    # True
+```
+
+Important:
+- `startswith()` checks beginning of string
+- `endswith()` checks ending of string
+
+---
+
+### Searching in String
+
+```python
+my_str = "hello world"
+
+print(my_str.find("world"))  # 6
+print(my_str.count("o"))     # 2
+```
+
+Important:
+- `find()` returns **index of first occurrence**
+- Returns **-1 if substring not found**
+- `count()` returns **number of occurrences**
+
+---
+
+### Case Checking
+
+```python
+my_str = "HELLO"
+print(my_str.isupper())  # True
+
+my_str = "hello"
+print(my_str.islower())  # True
+```
+
+Important:
+- `isupper()` → checks if all letters are uppercase
+- `islower()` → checks if all letters are lowercase
+
+---
+
+### Common Mistakes
+- Strings are **immutable**, methods return a new string.
+- Forgetting to assign result:
+
+❌ Wrong
+```python
+my_str.upper()
+```
+
+✅ Correct
+```python
+my_str = my_str.upper()
+```
