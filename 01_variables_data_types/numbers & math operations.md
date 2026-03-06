@@ -241,9 +241,6 @@ print(pow(2, 3, 5))  # (2**3) % 5 = 3
 - `int()` removes decimal part
 - `round()` rounds number
 - `abs()` returns positive value
-```
-
-
 
 
 # Augmented Assignment in Python
