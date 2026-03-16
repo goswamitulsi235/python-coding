@@ -95,3 +95,5 @@ except (ValueError, ZeroDivisionError) as e:
 - `else` → runs if no error  
 - `finally` → always runs  
 - Use `as e` to access error details
+
+
